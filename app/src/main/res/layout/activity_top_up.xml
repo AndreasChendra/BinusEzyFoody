@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TopUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="20dp"
+        android:background="@color/green">
+
+        <ImageView
+            android:id="@+id/topupLogo"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:src="@drawable/topupblack"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/titleTopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topup Balance"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_toRightOf="@+id/topupLogo"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Binus EzyFoody"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/topupLogo"
+            android:includeFontPadding="false"
+            android:layout_below="@+id/titleTopup"
+            android:layout_marginLeft="10dp"/>
+
+    </RelativeLayout>
+
+    <!--Text Saldo-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="-100dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorOrange"
+            app:cardElevation="10dp"
+            android:layout_margin="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+                
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/money"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/textSaldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saldo"
+                    android:textSize="20sp"
+                    android:includeFontPadding="false"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/angkaSaldo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:paddingTop="6dp"
+                    android:text="30000"
+                    android:textSize="17sp"
+                    android:layout_below="@+id/textSaldo"
+                    android:layout_centerHorizontal="true"/>
+                
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!--Fill Nominal Input-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input Saldo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/inputSaldo"
+                android:text=""
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!--Button PayTopup-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:padding="20dp"
+        android:background="@color/green">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-100dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/payTopup"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/colorOrange"
+                app:cardElevation="10dp"
+                android:layout_margin="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/topupplus"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:id="@+id/textPay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay"
+                        android:textSize="20sp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:id="@+id/textTopUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:includeFontPadding="false"
+                        android:text="Top Up"
+                        android:textSize="19sp"
+                        android:layout_below="@+id/textPay"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
